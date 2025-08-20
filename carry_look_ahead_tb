@@ -1,0 +1,17 @@
+//carry lookahead testbench
+module carry_tb;
+reg [3:0] a,b;
+reg cin;
+wire [3:0] sum;
+wire cout;
+integer i;
+
+carryadder ca0(.a(a), .b(b), .cin(cin), .sum(sum), .cout(cout));
+initial begin
+a <= 0; b <= 0; cin <= 0;
+  $monitor("a=%b b=%b cin=%b sum=%b carry=%b", a, b, cin, sum, cout);
+a <= 4'b0101; b <= 4'b0010; cin <= 0; #10
+a <= 4'b0001; b <= 4'b0010; cin <= 1; #10
+a <= 4'b0111; b <= 4'b1010; cin <= 0;
+end
+endmodule
