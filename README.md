@@ -8,6 +8,7 @@ Design and Test bench for basic Digital blocks, written in verilog
    - Faster than ripple carry adder due to immediate carry generation.
    - Implementation is done using dataflow modelling.
 
+
 2. **8-bit MAC unit**
 
    - MAC stands for Multiply And aCcumulate, It is a Sequential circuit (has to remember previous value).
