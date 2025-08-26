@@ -21,6 +21,9 @@ Design and Test bench for basic Digital blocks, written in verilog
   
 3. ## Booth Multiplier
 
-   -Booth's Algorithm is a quick and efficient way of calculating the product of two signed numbers in
-    its two's complement form.
-   -Multiplication is basically repeated addition and 
+   - Booth's Algorithm is a quick and efficient way of calculating the product of two signed numbers in
+     its two's complement form.
+   - Multiplication is basically repeated addition and booth algorithm replaces additions of consecutive
+     1s into a compressed calculation.
+   - If the multiplier is n bit the inputs are of n bits and the output is of 2n bits.
+   - Implementation is done using behavioral modelling.
