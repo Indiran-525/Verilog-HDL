@@ -18,3 +18,9 @@ Design and Test bench for basic Digital blocks, written in verilog
    - The result of adder is again stored in the accumulator.
    - MAC units are used widely in DSP and CNN.
    - Implementation is done using behavioral modelling.
+  
+3. ## Booth Multiplier
+
+   -Booth's Algorithm is a quick and efficient way of calculating the product of two signed numbers in
+    its two's complement form.
+   -Multiplication is basically repeated addition and 
