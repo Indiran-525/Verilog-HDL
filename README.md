@@ -29,7 +29,7 @@ Design and Test bench for basic Digital blocks, written in verilog
    - Implementation is done using behavioral modelling.
   
     ```mermaid
-flowchart TD
+    flowchart TD
     A[Line or Path Detection Division] --> B[Motor Control Division]
     A --> C[Color Detection & Counting Division]
     C --> D[Gripper Control Division]
