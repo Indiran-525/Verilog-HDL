@@ -28,13 +28,24 @@ Design and Test bench for basic Digital blocks, written in verilog
    - If the multiplier is n bit the inputs are of n bits and the output is of 2n bits.
    - Implementation is done using behavioral modelling.
   
-    ```mermaid
-    flowchart TD
-    A[Line or Path Detection Division] --> B[Motor Control Division]
-    A --> C[Color Detection & Counting Division]
-    C --> D[Gripper Control Division]
-    B --> E[Control & Processing Division]
-    C --> E
-    D --> E
+```mermaid
+flowchart TD
+
+    %% Sensors Layer
+    A[Line/Path Detection Division] --> E[Control & Processing Division]
+    B[Color Detection & Counting Division] --> E
+    C[Gripper Control Division] --> E
+    
+    %% Processing Layer
+    E --> D[Motor Control Division]
+    E --> C
     E --> F[Power Management Division]
+    
+    %% Power Supply
+    F --> A
+    F --> B
+    F --> C
+    F --> D
+    F --> E
+
 
