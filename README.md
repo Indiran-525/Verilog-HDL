@@ -30,20 +30,29 @@ Design and Test bench for basic Digital blocks, written in verilog
   
 ```mermaid
 flowchart LR
-    subgraph PWR[Power Management - Common to All]
-        LINE[Line Detection] --> CTRL[Control & Processing]
-        COLOR[Color Detection] --> CTRL
-        CTRL --> MOTOR[Motor Control]
-        CTRL --> GRIPPER[Gripper Control]
+    subgraph PWR["⚡ Power Management (Common to All)"]
+        LINE["Line Detection"] --> CTRL["Control & Processing"]
+        COLOR["Color Detection"] --> CTRL
+        CTRL --> MOTOR["Motor Control"]
+        CTRL --> GRIPPER["Gripper Control"]
     end
 
-    %% === Styles ===
-    style LINE fill=#FFD580,stroke=#333,stroke-width=2px
-    style COLOR fill=#87CEFA,stroke=#333,stroke-width=2px
-    style CTRL fill=#90EE90,stroke=#333,stroke-width=2px
-    style MOTOR fill=#FF9999,stroke=#333,stroke-width=2px
-    style GRIPPER fill=#D8BFD8,stroke=#333,stroke-width=2px
-    style PWR fill=#F0F0F0,stroke=#333,stroke-width=2px
+    %% === Classes ===
+    classDef line fill:#FFD580,stroke:#333,stroke-width:2px;
+    classDef color fill:#87CEFA,stroke:#333,stroke-width:2px;
+    classDef ctrl fill:#90EE90,stroke:#333,stroke-width:2px;
+    classDef motor fill:#FF9999,stroke:#333,stroke-width:2px;
+    classDef gripper fill:#D8BFD8,stroke:#333,stroke-width:2px;
+    classDef power fill:#F0F0F0,stroke:#333,stroke-width:2px;
+
+    %% === Assign classes ===
+    class LINE line
+    class COLOR color
+    class CTRL ctrl
+    class MOTOR motor
+    class GRIPPER gripper
+    class PWR power
+
 
 
 
