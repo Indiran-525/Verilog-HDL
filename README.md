@@ -30,23 +30,13 @@ Design and Test bench for basic Digital blocks, written in verilog
   
 ```mermaid
 flowchart TD
-    PWR[Power Management Division] --> CTRL[Control & Processing Division]
+    PWR[⚡ Power Management] --> CTRL[🧠 Control & Processing]
 
-    subgraph Input[Input / Sensing]
-        LINE[Line or Path Detection Division]
-        COLOR[Color Detection & Counting Division]
-    end
+    LINE[🔍 Line Detection] --> CTRL
+    COLOR[🎨 Color Detection] --> CTRL
 
-    subgraph Output[Output / Actuation]
-        MOTOR[Motor Control Division]
-        GRIPPER[Gripper Control Division]
-    end
-
-    LINE --> CTRL
-    COLOR --> CTRL
-
-    CTRL --> MOTOR
-    CTRL --> GRIPPER
+    CTRL --> MOTOR[🚗 Motor Control]
+    CTRL --> GRIPPER[🛠 Gripper Control]
 
 
 
