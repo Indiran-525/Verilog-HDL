@@ -29,13 +29,21 @@ Design and Test bench for basic Digital blocks, written in verilog
    - Implementation is done using behavioral modelling.
   
 ```mermaid
-flowchart TD
+flowchart LR
     subgraph PWR[Power Management - Common to All]
         LINE[Line Detection] --> CTRL[Control & Processing]
         COLOR[Color Detection] --> CTRL
         CTRL --> MOTOR[Motor Control]
         CTRL --> GRIPPER[Gripper Control]
     end
+
+    %% === Styles ===
+    style LINE fill=#FFD580,stroke=#333,stroke-width=2px
+    style COLOR fill=#87CEFA,stroke=#333,stroke-width=2px
+    style CTRL fill=#90EE90,stroke=#333,stroke-width=2px
+    style MOTOR fill=#FF9999,stroke=#333,stroke-width=2px
+    style GRIPPER fill=#D8BFD8,stroke=#333,stroke-width=2px
+    style PWR fill=#F0F0F0,stroke=#333,stroke-width=2px
 
 
 
