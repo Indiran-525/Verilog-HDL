@@ -28,7 +28,13 @@ Design and Test bench for basic Digital blocks, written in verilog
    - If the multiplier is n bit the inputs are of n bits and the output is of 2n bits.
    - Implementation is done using behavioral modelling.
   
+4. ## Arithmetic and Logic Unit (ALU)
 
+   - An ALU is an essential component of any cpu. It is written as a combinational circuit in this design.
+   - An Arithmetic and Logic Unit as the name suggests performs Arithmetic and Logical operations on operands.
+   - This is an 8 bit design with a 3 bit opcode (8 options) which enables the use of basic arithmetic and bitwise logical operations.
+   - This design can be extended to opcode with 4 bits, enabling the shift operations, etc.
+   - Implementation is done using behavioral modelling. 
 
 
 
